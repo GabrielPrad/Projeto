@@ -5,15 +5,13 @@
 }
 
 body{
-    font-family: tahoma, arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
 }
 
 #principal{
-    width: 1024px;
-    margin:  40px auto;
     background-color: whitesmoke;
 }
 
@@ -61,7 +59,7 @@ body{
     color: #425564;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     margin-right: 20px;
     font-size: 15px;
@@ -87,16 +85,25 @@ body{
 main{
     justify-content: center;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main p{
+  font-size: 20px;
 }
 
 article h2{
     font-weight: 400;
 }
 
+.efeito{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
 h2 {
-    font-family: "Montserrat Medium";
-    position: absolute;
-    left: 43%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     max-width: 40ch;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -195,11 +202,22 @@ h2 {
 
 
 .about img{
-    position: inherit;
-    left: 35%;
-    top: 50%;
+    display: flex;
+    margin: auto;
     width: 500px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.insta{
+  display: flex;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-bottom: 50px;
+}
+
+.instagram-media{
+  box-shadow: 10px 10px 20px #cccccc,
+    -10px -10px 20px #ffffff;
 }
 
 .rodape{
@@ -244,6 +262,15 @@ footer p:hover{
     text-decoration: none;
 }
 
+.icon-redes a:hover{
+  background-color: #425564;
+}
+
+.foot a:hover{
+  text-decoration: none;
+  color:#425564 !important ;
+}
+
  a{
     text-decoration: none;
 }
@@ -252,3 +279,29 @@ footer p:hover{
     color: #425564;
 }
 
+@media (max-width: 719px) {
+
+  .header-nav{
+    display: none;
+  }
+
+  footer{
+    height: 100%;
+    width: 100%;
+  }
+
+  .foot p{
+    font-size: 2vh;
+  }
+
+  .foot h3{
+    margin: 20px;
+  }
+
+  .icon-redes a{
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+  }
+
+ }
