@@ -2,12 +2,9 @@ body{
     font-family: tahoma, arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
 }
 
-#principal{
-    width: 1024px;
-    margin:  40px auto;
+.principal{
     background-color: whitesmoke;
 }
 
@@ -36,8 +33,9 @@ body{
 .perfil{
   padding: 35px;
   display: inline-flex;
-  gap: 20px;
+  gap: 30px;
 }
+
 
 .shop{
   display: flex;
@@ -78,7 +76,10 @@ body{
     left: 45%;
 }
 
-
+.carousel-inner h3{
+  color: #faf6f9;
+  text-shadow: 2px 2px #000;
+}
 
 .carousel-caption {
     font-size: 12px;
@@ -112,22 +113,44 @@ body{
 
   article {
     position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px #cccccc,
+    -10px -10px 20px #ffffff;
+    -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+  }
+
+  article:hover{
+    -webkit-transform: scale(1.1);
+   transform: scale(1.1);
   }
   
   .article-img {
     height: 200px;
     width: 100%;
     object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: 0 0 2px 3px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .article-img:hover{
+    cursor: pointer;
   }
   
   .article-title {
     position: relative;
     bottom: 0;
     width: 100%;
-    
-    
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .price{
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
   }
 
   .cat{
@@ -179,6 +202,20 @@ footer p:hover{
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.icon-redes a:hover{
+  background-color: #425564;
+}
+
+.foot a:hover{
+  text-decoration: none;
+  color:#425564 !important ;
+}
+
+a{
+  text-decoration: none;
 }
 
 
@@ -194,7 +231,43 @@ footer p:hover{
    .cards {
      display: grid;
      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-     grid-gap: 30px;
+     grid-gap: 35px;
+   }
+
+   @media (max-width: 719px) {
+    .carousel-inner, .carousel-caption, .carousel-control, .carousel-control.left, .carousel-control.right, .carousel-indicators{
+      display: none;
+    }
+
+    .header-nav{
+      display: none;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-gap: 30px;
+    }
+
+    footer{
+      height: 100%;
+      width: 100%;
+    }
+
+    .foot p{
+      font-size: 2vh;
+    }
+
+    .foot h3{
+      margin: 20px;
+    }
+
+    .icon-redes a{
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+    }
+
    }
 
    
